@@ -15,7 +15,7 @@ $(document).on('change','#raza', function(event){
     //var url = "https://api.thecatapi.com/v1/images/search?limit="+nroTotalImagenes
     var url = "https://api.thecatapi.com/v1/images/search?breed_ids="+ $(this).val() +"&limit="+nroTotalImagenes;
     $("#lista-gatos").html("");
-    generar_galeria_imagenes(selectorTablaHTML, nroTotalImagenes, nroColumnasPorFila, url,"Cambiar Imagen");
+    generar_galeria_imagenes(selectorTablaHTML, nroTotalImagenes, nroColumnasPorFila, url,"Ver Detalle");
  
 });
 
