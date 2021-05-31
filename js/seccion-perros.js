@@ -38,3 +38,24 @@ function createSelet(ruta) {
     });
     
 }
+
+function buscarRaza(raza) {
+    var ruta = "https://api.thedogapi.com/v1/breeds/search?q=" +raza;
+    console.log("ruta:"+ruta);
+    $.get(ruta, function(response){
+        
+        //iterar por el único elemento que debería devolver la respuesta
+        $.each(response, function(index, element){
+            //options += '<option value="' +element.id + '">' + element.name + '</option>';
+            console.log("response:"+response);
+            console.log("Nombre:"+element.name);
+            console.log("PesoPromedio:"+element.weight.metric);
+            console.log("EstaturaPromedio:"+element.height.metric);
+            console.log("PromedioVida:"+element.life_span);
+            //cuando la imagen ya se encuentra descargada
+                 
+        });
+        //$('#raza').html(options);
+    });
+    
+}
